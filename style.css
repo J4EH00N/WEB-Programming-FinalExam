@@ -92,7 +92,7 @@ nav {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 170px 100px 100px;
+  padding: 130px 100px 100px;
   gap: 40px;
 }
 
@@ -223,22 +223,142 @@ nav {
   object-fit: contain;
 }
 
-/*Project*/
+/*project*/
 
-.project {
-  background-color: #f8f8f8;
+.project-section {
+  background: #fafbfc;
   padding: 100px 9vw;
 }
-
-.project h2 {
+.project-section h2 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: var(--text-color-second);
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #383838;
+  font-weight: 700;
+}
+.project-section hr {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  border: 0.5px solid #ccc;
+}
+
+/* 갤러리 전체 감싸는 래퍼 */
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+
+/* 좌우 스크롤 버튼 */
+.scroll-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #436cff;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 60px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(67, 133, 255, 0.08);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  z-index: 2;
+}
+.scroll-btn:hover {
+  background: #436cff;
+  color: #fff;
+}
+
+.project-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 28px;
+  padding: 20px 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* 파이어폭스 */
+  -ms-overflow-style: none; /* Edge */
+}
+
+.project-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  background: white;
+  min-width: 350px;
+  max-width: 350px;
+  border-radius: 22px;
+  box-shadow: 0 4px 32px rgba(70, 120, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  transition: transform 0.22s, box-shadow 0.22s;
+  cursor: grab;
+  overflow: hidden;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 10px 32px rgba(67, 133, 255, 0.18);
+}
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #eee;
+  border-bottom: 1px solid #f0f0f0;
+}
+.project-content {
+  flex: 1;
+  padding: 26px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-content h3 {
+  font-size: 22px;
+  color: #323232;
+  margin-bottom: 6px;
+}
+.project-content p {
+  font-size: 15px;
+  color: #444;
+  flex: 1;
+}
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.project-links .btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  padding: 7px 16px;
+  background: #f6f6f9;
+  border: none;
+  border-radius: 9px;
+  color: #224de0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 1px 8px rgba(67, 133, 255, 0.07);
+}
+
+.project-links .btn.link:hover {
+  background: #dae6ff;
+  color: #1b3caa;
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    min-width: 270px;
+    max-width: 270px;
+  }
 }
 
 /*Team*/
-
 .team-section {
   background-color: #f8f8f8;
   padding-left: 150px;
