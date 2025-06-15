@@ -599,8 +599,8 @@ nav {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  .about-image img {
-    max-width: 90vw;
+  .about-image {
+    width: 50px;
   }
   .team-section {
     padding-left: 8px;
@@ -641,6 +641,15 @@ nav {
   }
   .about-left {
     margin-left: 25%;
+  }
+  .about-right {
+    width: 200px;
+    margin-left: 25%;
+  }
+  .about-image {
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
   }
   .project-section {
     padding: 32px 2vw;
